@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SwachhConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME SECTION -->
+<section id="home">
+    <header>
+        <h1>SwachhConnect</h1>
+        <p><strong>Clean India, Green India – Your Step Towards a Better Tomorrow</strong></p>
+    </header>
+
+    <div class="content">
+        <h2>About the webpage</h2>
+        <p>
+            SwachhConnect is a smart waste collection management platform for both rural and urban areas. This platform helps citizens report waste by uploading images/videos along with location and details of the waste.
+            It directly connects to  nearby municipal authorities for  quick action.
+        </p>
+
+        
+    <h2>Why Clean Surroundings Matter?</h2>
+    <ul>
+        <li>Prevents diseases and improves public health</li>
+        <li>Protects the environment and wildlife</li>
+        <li>Creates a positive and hygienic living space</li>
+        <li>Supports the Swachh Bharat Abhiyan</li>
+    </ul>
+
+    <h2>How to Keep Your Surroundings Clean</h2>
+    <ul>
+        <li>Avoid littering in public places</li>
+        <li>Report unmanaged waste through this platform</li>
+    </ul>
+
+    <h2>Instructions to Report Waste</h2>
+    <ul>
+        <li>Click on the <strong>Image</strong> button below</li>
+        <li>Upload a clear image or video of the waste</li>
+        <li>Describe the type and location of the waste</li>
+        <li>Submit the report for municipal action</li>
+    </ul> 
+       
+
+        <button onclick="showReport()"> Click Here to upload</button>
+    </div>
+</section>
+
+<!-- REPORT SECTION -->
+<section id="report" style="display:none;">
+    <header>
+        <h1> Waste Report</h1>
+    </header>
+
+    <div class="form-container">
+        <form onsubmit="return validateForm()">
+
+             <label>Upload Image / Video:</label>
+             <input type="file" id="media" accept="image/*,video/*">
+
+             <label>Location:</label>
+            <input type="text" id="location" placeholder="Click button or enter location">
+
+            <button type="button" onclick="getLocation()">📍 Get Current Location</button>
+
+            
+            <label>Description:</label>
+            <textarea id="description" placeholder="Enter waste details..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    </div>
+</section>
+
+<!-- LINK JS FILE -->
+<script src="script.js"></script>
+
+</body>
+</html>
